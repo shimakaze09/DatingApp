@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AccountService} from "../services/account.service";
+import {AccountService} from '../services/account.service';
 
 @Component({
   selector: 'app-nav',
@@ -15,13 +15,14 @@ export class NavComponent {
   login() {
     this.accountService.login(this.model).subscribe({
       next: response => {
-        console.log(response)
+        console.log(response);
       },
       error: error => console.log(error)
     })
   }
 
   logout() {
-    this.accountService.logout()
+    this.accountService.logout();
   }
+
 }
